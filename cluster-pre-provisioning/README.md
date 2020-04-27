@@ -153,9 +153,9 @@ az network vnet subnet update -g $RG --vnet-name $VNET_NAME --name $AKSSUBNET_NA
 
 ## AKS Creation Service Principal Pre-requisites
 
-This section walks through creating a Service Principal which will be used by AKS to create the cluster resources. It is this Service Principal that actually creates the underlying Azure resources such as VMs, Storage, Load Balancers, etc. used by AKS. If you grant to few permissions it will not be able to create the AKS Cluster. If you grant too much then the Security Principle of Least Privilege is not being followed. If you have an existing Service Principal feel free to leverage that.
+This section walks through creating a Service Principal which will be used by AKS to create the cluster resources. It is this Service Principal that actually creates the underlying Azure resources including the VMs, Storage, Load Balancers, etc. used by AKS. If you grant too few permissions to the SP, it will not be able to create the AKS Cluster. If you grant too many permissions, then the Security Principle of Least Privilege is not being followed. If you have an existing Service Principal, feel free to leverage that.
 
-The key permission that is being granted to the Service Principal below is to the Virtual Network so it can create resources inside of the network.
+The key permission that is being granted to the Service Principal below is the ability to create resources inside of the Virtual Network.
 
 ```bash
 # Create SP and Assign Permission to Virtual Network
