@@ -37,7 +37,7 @@ This is a sample screenshot of what it looks like when completed:
 
 ![Activity Log Capture](/governance-security/img/ActivityLogCapture.png)
 
-## Enable Azure Security Monitoring (AKS Cluster IP Whitelisting Enabled)
+## Enable Azure Security Monitoring (Determine if AKS Cluster IP Whitelisting is Enabled)
 
 Before we create anything, we should look to the Cloud Provider for security monitoring best practices and recommendations. Within Azure specifically, we can enable Azure Security Center (ASC) to gain visibility into such recommendations. By leveraging ASC, we can determine whether or not an AKS Cluster has IP Whitelisting (Authorized IP Ranges) enabled.
 
